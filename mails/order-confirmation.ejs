@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <h4>Here's what you ordered</h4>
+    <table style="border-bottom: 1px solid #0000002f;">
+        <tr>
+            <td>
+                Order #: <%= order._id %>
+            </td>
+            <td>
+                Order Date: <%= order.date %>
+            </td>
+        </tr>
+    </table>
+
+    </table style="width:90%; margin:auto; display:block; ">
+      <tr>
+         <td class="first-td">Item</td>
+         <td class="first-td">Qty</td>
+         <td class="first-td">Cost</td>
+
+      </tr>
+    <table>
+
+    </table style="width:90%; margin:auto; display:block; ">
+     <tr>
+       <td class="second-td"><%= order.name %></td>
+       <td class="second-td">1</td>
+       <td class="second-td">$ <%= order.price %></td>
+
+      </tr>
+    <table>
+
+    <table  class="table-row" style="border-bottom: 1px solid #0000002f;">
+        <tr>
+            <td class="col-2">Subtotal:</td>
+            <td class="col-2">$ <%= order.price %></td>
+        </tr>
+    </table>
+
+    <table  class="table-row" style="margin-top: -20px;">
+        <tr>
+            <td class="col-2">Total:</td>
+            <td class="col-2">$ <%= order.price %></td>
+        </tr>
+    </table>
+  </div>
+  <div class="email-footer">
+    <p>Bize ulaşın: <a href="mailto:furkankarazeybek7@gmail.com">furkankarazeybek7@gmail.com</a></p>
+</div>
+</body>
+</html>

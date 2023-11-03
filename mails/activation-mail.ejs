@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Aktivasyon Maili</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-width: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            background-color: #FAFAFA;
+            color: #222222
+        }
+
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.25;
+            margin-top:0;
+            margin-bottom: 15px;
+            text-align:center;
+        }
+        p {
+            margin-top:0;
+            margin-bottom: 24px;
+        }
+        table td {
+            vertical-align: top;
+        }
+        .email-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .email-header {
+            background-color: #0070f3;
+            padding: 24px;
+            color: #ffffff;
+        }
+        .email-body {
+            padding:24px;
+            background-color: #ffffff;
+        }
+        .email.footer {
+            background-color: #f6f6f6;
+            padding: 24px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #0070f3;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: center;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-wrapper">
+        <div class="email-header">
+            <h1>Fast Learning'e Hoşgeldin</h1>
+        </div>
+        <div class="email-body">
+            <p>Merhaba <%= user.name %>,</p>
+            <p>Fast Learning' kayıt olduğunuz için teşekkürler. Üyeliğinizi aktif etmek için lütfen aşağıdaki aktivasyon kodunu kullanınınız.</p>
+            <h2><%= activationCode %></h2>
+            <p>Lütfen 5 dakika içerisinde bu kodu aktivasyon ekranına giriniz</p>
+            <p>Eğer kayıt olmadıysanız bu emaili dikkate almayın. </p>
+        </div>
+        <div class="email-footer">
+            <p>Bize ulaşın: <a href="mailto:furkankarazeybek7@gmail.com">furkankarazeybek7@gmail.com</a></p>
+        </div>
+    </div>
+</body>
+</html>

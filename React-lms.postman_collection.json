@@ -1,0 +1,927 @@
+{
+	"info": {
+		"_postman_id": "fffeb11a-deef-4feb-9381-f656e789175b",
+		"name": "React-lms",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17609561",
+		"_collection_link": "https://crimson-crescent-812578.postman.co/workspace/My-Workspace~7a129e5f-f30e-4855-83d8-13db4e6adfc1/collection/17609561-fffeb11a-deef-4feb-9381-f656e789175b?action=share&source=collection_link&creator=17609561"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Furkan delete\",\r\n    \"email\": \"nightfox413@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/registration",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"registration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Activate-User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"activation_code\" : \"7475\",\r\n    \"activation_token\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5hbWUiOiJGdXJrYW4gZGVsZXRlIiwiZW1haWwiOiJuaWdodGZveDQxM0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1Njc4In0sImFjdGl2YXRpb25Db2RlIjoiNzQ3NSIsImlhdCI6MTY5OTAxMjMzNCwiZXhwIjoxNjk5MDEyNjM0fQ.FXPDJHQrMYnV-S5IMc4Jf2wZ5aUz8P4T87qzJisRCE4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/activate-user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"activate-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"furki304@gmail.com\",\r\n    \"password\": \"12312304\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/login-user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"login-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh Token",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/refresh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Load User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Social Auth",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"test\",\r\n    \"email\": \"test304@gmail.com\",\r\n    \"avatar\": \"https://img.com\"\r\n \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/social-auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"social-auth"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Course",
+			"item": [
+				{
+					"name": "Create Course",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"MERN2 Stack LMS / Learning Management system with next13\",\r\n    \"description\": \"Welcome to MERN STACK LMS. Lorem ipsum  Lorem ipsum  Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum\",\r\n    \"price\": 29,\r\n    \"estimatePrice\":80,\r\n    \"tags\": \"MERN Stack LMS, next13, typescript,node js , redis\",\r\n    \"level\":\"Intermediate\",\r\n    \"demoUrl\": \"hgag231\",\r\n    \"benefits\": [\r\n        {\r\n            \"title\": \"You will learn MERN stack dev.\"\r\n        }\r\n    ],\r\n    \"prerequisites\":[\r\n        {\r\n            \"title\": \"You need basic knowledge of Mern stack\"\r\n        }\r\n    ],\r\n    \"courseData\": [\r\n        {\r\n            \"videoUrl\": \"hydr141\",\r\n            \"title\": \"First Project Title\",\r\n            \"videoSection\": \"faafasfa\",\r\n            \"description\": \"safasfasfa\",\r\n            \"videoLength\": 12,\r\n            \"links\": [\r\n                {\r\n                    \"title\": \"source code\",\r\n                    \"url\": \"github.com\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/create-course",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"create-course"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Course",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"MERN Stack LMS Fast Learning / Learning Management system with next13\",\r\n    \"description\": \"Welcome to MERN STACK LMS. Lorem ipsum  Lorem ipsum  Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum\",\r\n    \"price\": 29,\r\n    \"estimatePrice\":80,\r\n    \"tags\": \"MERN Stack LMS, next13, typescript,node js , redis\",\r\n    \"level\":\"Intermediate\",\r\n    \"demoUrl\": \"hgag231\",\r\n    \"benefits\": [\r\n        {\r\n            \"title\": \"You will learn MERN stack dev.\"\r\n        }\r\n    ],\r\n    \"prerequisites\":[\r\n        {\r\n            \"title\": \"You need basic knowledge of Mern stack\"\r\n        }\r\n    ],\r\n    \"courseData\": [\r\n        {\r\n            \"videoUrl\": \"hydr141\",\r\n            \"title\": \"First Project Title\",\r\n            \"videoSection\": \"faafasfa\",\r\n            \"description\": \"safasfasfa\",\r\n            \"videoLength\": 12,\r\n            \"links\": [\r\n                {\r\n                    \"title\": \"source code\",\r\n                    \"url\": \"github.com\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/edit-course/6534566fe4addb0564289056",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"edit-course",
+								"6534566fe4addb0564289056"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Course  by Id without purchase",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/get-course/6544ef1edd840411e76fc909",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"get-course",
+								"6544ef1edd840411e76fc909"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Courses -without purchasing",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/get-courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"get-courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Course Content by Id --only valid users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/get-course-content/6534566fe4addb0564289056",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"get-course-content",
+								"6534566fe4addb0564289056"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Question",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\": \"Its a testing question 4\",\r\n    \"courseId\": \"6534566fe4addb0564289056\",\r\n    \"contentId\": \"65345e255037d1d6637d4873\"\r\n \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/add-question",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"add-question"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Answer to question",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"answer\": \"furkan7 answer\",\r\n    \"courseId\": \"6534566fe4addb0564289056\",\r\n    \"contentId\": \"65345e255037d1d6637d4873\",\r\n    \"questionId\": \"653476a9a54fd5578b490ede\"\r\n \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/add-answer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"add-answer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Review",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"review\" : \"It is cool\",\r\n    \"rating\" : 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/add-review/6534566fe4addb0564289056",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"add-review",
+								"6534566fe4addb0564289056"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Reply in review --- only admin",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment\" : \"Thank you for your review2\",\r\n    \"courseId\": \"6534566fe4addb0564289056\",\r\n    \"reviewId\": \"6544ad3c4d0bff3c35fa74d0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/add-reply",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"add-reply"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Courses --only admin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/get-courses-admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"get-courses-admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Course --only admin",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/delete-course/6544e50d02fad51d1bb7bfeb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"delete-course",
+								"6544e50d02fad51d1bb7bfeb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Courses Analytics --only admin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/get-courses-analytics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"get-courses-analytics"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Create Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"courseId\":\"6544a8f225831f870aca9dec\"\r\n  \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/create-order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"create-order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Order --only admin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/get-orders-admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"get-orders-admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Orders Analytics --only admin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/get-orders-analytics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"get-orders-analytics"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notifications",
+			"item": [
+				{
+					"name": "Get All Notifications -- ony admin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/get-all-notifications",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"get-all-notifications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Notification Status - make-read",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/update-notification/654416f48734b0bc96726dba",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"update-notification",
+								"654416f48734b0bc96726dba"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Update User Info",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Furkan Karazeybek\",\r\n    \"email\" : \"sponsorship@furkankarazeybek.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/update-user-info",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"update-user-info"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\" : \"12345678\",\r\n    \"newPassword\": \"12312304\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/update-user-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"update-user-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Upload - Update Avatar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"avatar\": \"data:image/png;base64,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\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/update-user-avatar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"update-user-avatar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get users -- only admin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/get-users-admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"get-users-admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Role -- only admin",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"6544128b6a09b4dcaa7ee740\",\r\n    \"role\":\"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/update-user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"update-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User -- only admin",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/delete-user/6544df573f741c224d5f05df",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"delete-user",
+								"6544df573f741c224d5f05df"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users Analytics  --only admin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/get-users-analytics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"get-users-analytics"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Layout",
+			"item": [
+				{
+					"name": "Create Layout --only admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"Categories\",\r\n    \"categories\": [\r\n        {\r\n            \"title\": \"Programming\"\r\n        },\r\n        {\r\n            \"title\": \"Digitial Marketing\"\r\n        },\r\n        {\r\n            \"title\": \"Graphics Design\"\r\n        },\r\n          {\r\n            \"title\": \"Machine Learning\"\r\n        }\r\n       \r\n\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/create-layout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"create-layout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Layout --only admin",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"FAQ\",\r\n    \"faq\": [\r\n        {\r\n            \"question\": \"Will I receive a certificate for each course?\",\r\n            \"answer\" : \"Yes — each student who completes any course will receive a certificate of completion to acknowledge their proficiency. We encourage students to include these on their LinkedIn profiles and in their job applications!\"\r\n        },\r\n        {\r\n            \"question\": \"Can I get source code of each course?\",\r\n            \"answer\" : \"Yes - You will get source code of all courses when you will watch the course video.\"\r\n        },\r\n        {\r\n            \"question\": \"Can I ask about anything related course or if my code dosen't work?\",\r\n            \"answer\" : \"Yes, you can comment on every part of the videos in the course. We'll always try to reply to your comment and fix any issues you may have.\"\r\n        },\r\n          {\r\n            \"question\": \"Can I download any course videos?\",\r\n            \"answer\" : \"For security reasons, course videos cannot be downloaded. However, you have lifetime access to each purchased course and can watch them anytime, anywhere with your account\"\r\n        }\r\n       \r\n\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/edit-layout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"edit-layout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Layout type --everyone",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"FAQ\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/get-layout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"get-layout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
